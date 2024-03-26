@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animation/implicit_animations/animated_align_example.dart';
 import 'package:flutter_animation/implicit_animations/animated_container.dart';
+import 'package:flutter_animation/implicit_animations/animated_default_text.dart';
 
 void main() {
   runApp(const MyApp());
@@ -53,6 +54,15 @@ class MainPage extends StatelessWidget {
                           builder: (context) => const AnimatedContainerExample()));
                 },
                 child: const Text("Animated Container Example")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const AnimatedDefaultTextExample()));
+                },
+                child: const Text("Animated Default Text Example")),
+
           ],
         ),
       ),
