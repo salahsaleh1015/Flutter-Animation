@@ -3,6 +3,7 @@ import 'package:flutter_animation/implicit_animations/AnimatedOpacityExample.dar
 import 'package:flutter_animation/implicit_animations/animated_align_example.dart';
 import 'package:flutter_animation/implicit_animations/animated_container.dart';
 import 'package:flutter_animation/implicit_animations/animated_default_text.dart';
+import 'package:flutter_animation/implicit_animations/animated_padding_example.dart';
 
 void main() {
   runApp(const MyApp());
@@ -72,7 +73,16 @@ class MainPage extends StatelessWidget {
                           builder: (context) =>
                           const AnimatedOpacityExample()));
                 },
-                child: const Text("Animated Opacity Text Example")),
+                child: const Text("Animated Opacity  Example")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                          const AnimatedPaddingExample()));
+                },
+                child: const Text("Animated Padding Example")),
 
 
           ],
