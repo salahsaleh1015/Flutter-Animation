@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animation/implicit_animations/AnimatedOpacityExample.dart';
 import 'package:flutter_animation/implicit_animations/animated_align_example.dart';
 import 'package:flutter_animation/implicit_animations/animated_container.dart';
 import 'package:flutter_animation/implicit_animations/animated_default_text.dart';
@@ -12,14 +13,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-
+    return MaterialApp(
       title: "flutter animation",
       debugShowCheckedModeBanner: false,
       home: MainPage(),
-     theme: ThemeData(
-       primarySwatch: Colors.blue,
-     ),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
     );
   }
 }
@@ -51,7 +51,8 @@ class MainPage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const AnimatedContainerExample()));
+                          builder: (context) =>
+                              const AnimatedContainerExample()));
                 },
                 child: const Text("Animated Container Example")),
             ElevatedButton(
@@ -59,9 +60,20 @@ class MainPage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const AnimatedDefaultTextExample()));
+                          builder: (context) =>
+                              const AnimatedDefaultTextExample()));
                 },
                 child: const Text("Animated Default Text Example")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                          const AnimatedOpacityExample()));
+                },
+                child: const Text("Animated Opacity Text Example")),
+
 
           ],
         ),
