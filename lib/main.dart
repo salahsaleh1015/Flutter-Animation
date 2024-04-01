@@ -5,6 +5,7 @@ import 'package:flutter_animation/implicit_animations/animated_container.dart';
 import 'package:flutter_animation/implicit_animations/animated_default_text.dart';
 import 'package:flutter_animation/implicit_animations/animated_padding_example.dart';
 import 'package:flutter_animation/implicit_animations/animated_physical_model.dart';
+import 'package:flutter_animation/implicit_animations/animated_positioned_example.dart';
 
 void main() {
   runApp(const MyApp());
@@ -93,6 +94,16 @@ class MainPage extends StatelessWidget {
                               const AnimatedPhysicalModelExample()));
                 },
                 child: const Text("Animated Physical Model Example")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                          const AnimatedPositionedExample()));
+                },
+                child: const Text("Animated Positioned Example")),
+
           ],
         ),
       ),
