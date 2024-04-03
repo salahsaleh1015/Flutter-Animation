@@ -7,6 +7,8 @@ import 'package:flutter_animation/implicit_animations/animated_padding_example.d
 import 'package:flutter_animation/implicit_animations/animated_physical_model.dart';
 import 'package:flutter_animation/implicit_animations/animated_positioned_example.dart';
 
+import 'implicit_animations/animated_positioned_directional_example.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -103,6 +105,18 @@ class MainPage extends StatelessWidget {
                           const AnimatedPositionedExample()));
                 },
                 child: const Text("Animated Positioned Example")),
+
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                          const AnimatedPositionedDirectionalExample()));
+                },
+                child: const Text("Animated Positioned Directional Example")),
+
+
 
           ],
         ),
