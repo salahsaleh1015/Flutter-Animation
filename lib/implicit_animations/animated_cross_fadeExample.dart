@@ -13,6 +13,9 @@ class _AnimatedCrossFadeExampleState extends State<AnimatedCrossFadeExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("AnimatedCrossFade Example"),
+      ),
       body: Center(
         child: GestureDetector(
           onTap: () {

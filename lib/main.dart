@@ -7,6 +7,7 @@ import 'package:flutter_animation/implicit_animations/animated_default_text.dart
 import 'package:flutter_animation/implicit_animations/animated_padding_example.dart';
 import 'package:flutter_animation/implicit_animations/animated_physical_model.dart';
 import 'package:flutter_animation/implicit_animations/animated_positioned_example.dart';
+import 'package:flutter_animation/implicit_animations/animated_switcher_example.dart';
 
 import 'implicit_animations/animated_positioned_directional_example.dart';
 
@@ -124,6 +125,16 @@ class MainPage extends StatelessWidget {
                           const AnimatedCrossFadeExample()));
                 },
                 child: const Text("Animated Cross Fade Example")),
+
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                          const AnimatedSwitcherExample()));
+                },
+                child: const Text("Animated Switcher Example")),
 
 
 
