@@ -4,6 +4,7 @@ import 'package:flutter_animation/implicit_animations/animated_align_example.dar
 import 'package:flutter_animation/implicit_animations/animated_container.dart';
 import 'package:flutter_animation/implicit_animations/animated_cross_fadeExample.dart';
 import 'package:flutter_animation/implicit_animations/animated_default_text.dart';
+import 'package:flutter_animation/implicit_animations/animated_list_example.dart';
 import 'package:flutter_animation/implicit_animations/animated_padding_example.dart';
 import 'package:flutter_animation/implicit_animations/animated_physical_model.dart';
 import 'package:flutter_animation/implicit_animations/animated_positioned_example.dart';
@@ -135,6 +136,16 @@ class MainPage extends StatelessWidget {
                           const AnimatedSwitcherExample()));
                 },
                 child: const Text("Animated Switcher Example")),
+
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                          const AnimatedListExample()));
+                },
+                child: const Text("Animated List Example")),
 
 
 
