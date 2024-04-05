@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animation/implicit_animations/AnimatedOpacityExample.dart';
 import 'package:flutter_animation/implicit_animations/animated_align_example.dart';
 import 'package:flutter_animation/implicit_animations/animated_container.dart';
+import 'package:flutter_animation/implicit_animations/animated_cross_fadeExample.dart';
 import 'package:flutter_animation/implicit_animations/animated_default_text.dart';
 import 'package:flutter_animation/implicit_animations/animated_padding_example.dart';
 import 'package:flutter_animation/implicit_animations/animated_physical_model.dart';
@@ -105,7 +106,6 @@ class MainPage extends StatelessWidget {
                           const AnimatedPositionedExample()));
                 },
                 child: const Text("Animated Positioned Example")),
-
             ElevatedButton(
                 onPressed: () {
                   Navigator.push(
@@ -115,6 +115,16 @@ class MainPage extends StatelessWidget {
                           const AnimatedPositionedDirectionalExample()));
                 },
                 child: const Text("Animated Positioned Directional Example")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                          const AnimatedCrossFadeExample()));
+                },
+                child: const Text("Animated Cross Fade Example")),
+
 
 
 
