@@ -1,0 +1,73 @@
+what is an animation in flutter ?
+it is a series of images or frames that changes at a period of time.
+//========
+what is a main keys to do animation in flutter?
+1- Animation Controller : responsible for control the animation
+2- Animation: the value that changed within the animation
+3- Tween: the range of Values from start point in animation to end point
+4- Foo Widget / Foo Transition Widget: Built in widgets support animation in flutter
+5- Animated Builder: widget get the developer an animation controller to do a unique animation.
+
+//============
+
+what are the main concepts of the animation in flutter ?
+1- Duration : it is the period of time while the animation finished,
+2- Curve:(animation behavior) a mathematical equations that control the duration progress
+3- interpolation: used to make a smooth animation in flutter
+
+//=============
+what is the types of animation in flutter ?
+1- Implicit Animation: most easy way to do animation no need to control but you cant customize your animation
+2- Explicit Animation: more complex than the Implicit you need to control the animation but more customizable
+3- Low Level Animation: you create it and control it (custom painter)
+4- third party framework: put and go ( lottie animation )
+
+Animation Controller:
+Control (start – progress – end)
+Need (Duration - vsync)
+Function animation (Controller.forward(); - Controller.reverse(); - Controller.dispose();)
+
+
+Animation Controller Properties:
+1-	Status
+2-	Value
+3-	listeners
+
+Animation Controller Status:
+ animationStatus.forward(); from 0.0 to 1.0
+animationStatus.reverse(); from 1.0 to 0.0
+animationStatus.completed(); the value of animation is 1.0
+animationStatus.dissmised(); the value of animation is 0.0
+
+
+Animation Controller Listeners:
+1-	_animationController.addListeners(){}
+
+2-	_animationController.removeListeners(){}
+
+ Animation Controller Value:
+From 0.0 To 1.0
+Example   the animation is from 50 t0 100
+So 0.0 = 50 & 1.0 = 100
+
+
+
+
+VSYNC:
+Stand for => Vertical Synchronization
+Used to Estimate the Refresh Rate of The Screen
+Note: Each Screen have it’s Own Refresh Rate so we use (vsync:this)
+
+VSYNC Types:
+1-	Single Ticker Provider => for single animation
+2-	Ticker Provider => for multi Animation
+
+
+Animation Builder Types:
+
+1-	Animated builder
+2-	Tween Animation builder
+3-	Page Route Builder
+4-	Transition Builder
+
+
