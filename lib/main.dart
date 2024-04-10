@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animation/explicit_animations/animation_builder_example.dart';
+import 'package:flutter_animation/explicit_animations/fade_transition_example.dart';
 import 'package:flutter_animation/explicit_animations/positioned_transition_example.dart';
 import 'package:flutter_animation/explicit_animations/rotation_transition_example.dart';
 import 'package:flutter_animation/explicit_animations/size_transition_example.dart';
@@ -233,6 +234,18 @@ class MainPage extends StatelessWidget {
                             const AnimationBuilderExample()));
                   },
                   child: const Text("Animation Builder Example", style: TextStyle(color: Colors.black),)),
+              ElevatedButton(
+                  style:ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(const Color(0xff018abe)),
+                  ) ,
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                            const FadeTransitionExample()));
+                  },
+                  child: const Text("Fade Transition Example", style: TextStyle(color: Colors.black),)),
 
             ],
           ),
