@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animation/explicit_animations/animation_builder_example.dart';
 import 'package:flutter_animation/explicit_animations/default_text_style_transition_example.dart';
 import 'package:flutter_animation/explicit_animations/fade_transition_example.dart';
+import 'package:flutter_animation/explicit_animations/indexed_stack_transition_example.dart';
 import 'package:flutter_animation/explicit_animations/positioned_directional_transition_example.dart';
 import 'package:flutter_animation/explicit_animations/positioned_transition_example.dart';
 import 'package:flutter_animation/explicit_animations/rotation_transition_example.dart';
@@ -287,6 +288,19 @@ class MainPage extends StatelessWidget {
                             const DefaultTextStyleTransitionExample()));
                   },
                   child: const Text("Default Text Style Transition Example", style: TextStyle(color: Colors.black),)),
+              ElevatedButton(
+                  style:ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(const Color(0xff018abe)),
+                  ) ,
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                            const IndexedStackTransitionExample()));
+                  },
+                  child: const Text("Indexed Stack Transition Example", style: TextStyle(color: Colors.black),)),
+
 
 
             ],
