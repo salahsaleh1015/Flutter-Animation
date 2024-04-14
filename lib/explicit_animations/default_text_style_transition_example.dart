@@ -26,7 +26,6 @@ class _DefaultTextStyleTransitionExampleState
     super.initState();
   }
 
-
   final TextStyle _style1 = const TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.bold,
@@ -39,21 +38,22 @@ class _DefaultTextStyleTransitionExampleState
   );
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
-        title:const Text("Default Text Style Transition"),
+        title: const Text("Default Text Style Transition"),
       ),
-     body: Center(
-       child: DefaultTextStyleTransition(
-         style:_animation.drive(TextStyleTween(begin: _style1, end: _style2)),
-         child: const Text("Hello World",),
-       )
-     ),
+      body: Center(
+          child: DefaultTextStyleTransition(
+        style: _animation.drive(TextStyleTween(begin: _style1, end: _style2)),
+        child: const Text(
+          "Hello World",
+        ),
+      )),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){
-          if(_controller.status == AnimationStatus.completed){
+        onPressed: () {
+          if (_controller.status == AnimationStatus.completed) {
             _controller.reverse();
-          }else{
+          } else {
             _controller.forward();
           }
         },
