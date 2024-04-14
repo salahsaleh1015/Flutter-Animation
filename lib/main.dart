@@ -5,6 +5,7 @@ import 'package:flutter_animation/explicit_animations/positioned_directional_tra
 import 'package:flutter_animation/explicit_animations/positioned_transition_example.dart';
 import 'package:flutter_animation/explicit_animations/rotation_transition_example.dart';
 import 'package:flutter_animation/explicit_animations/size_transition_example.dart';
+import 'package:flutter_animation/explicit_animations/tween_animation_builder_example.dart';
 import 'package:flutter_animation/implicit_animations/AnimatedOpacityExample.dart';
 import 'package:flutter_animation/implicit_animations/animated_align_example.dart';
 import 'package:flutter_animation/implicit_animations/animated_container.dart';
@@ -259,6 +260,19 @@ class MainPage extends StatelessWidget {
                             const PositionedDirectionalTransitionExample()));
                   },
                   child: const Text("Positioned Directional Transition Example", style: TextStyle(color: Colors.black),)),
+
+              ElevatedButton(
+                  style:ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(const Color(0xff018abe)),
+                  ) ,
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                            const TweenAnimationBuilderExample()));
+                  },
+                  child: const Text("Tween Animation Builder Example", style: TextStyle(color: Colors.black),)),
 
 
             ],
