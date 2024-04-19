@@ -18,6 +18,8 @@ import 'package:flutter_animation/implicit_animations/animated_padding_example.d
 import 'package:flutter_animation/implicit_animations/animated_physical_model.dart';
 import 'package:flutter_animation/implicit_animations/animated_positioned_example.dart';
 import 'package:flutter_animation/implicit_animations/animated_switcher_example.dart';
+import 'package:flutter_animation/page_transitions/page_fade_transitions.dart';
+import 'package:flutter_animation/page_transitions/page_two.dart';
 import 'implicit_animations/animated_positioned_directional_example.dart';
 void main() {
   runApp(const MyApp());
@@ -301,6 +303,14 @@ class MainPage extends StatelessWidget {
                   },
                   child: const Text("Indexed Stack Transition Example", style: TextStyle(color: Colors.black),)),
 
+              ElevatedButton(
+                  style:ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(const Color(0xff02457a)),
+                  ) ,
+                  onPressed: () {
+                  Navigator.of(context).push(PageFadeTransitions(const PageTwo()));
+                  },
+                  child: const Text("Page Fade Transition", style: TextStyle(color: Colors.black),)),
 
 
             ],
