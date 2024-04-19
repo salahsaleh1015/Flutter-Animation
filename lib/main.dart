@@ -19,6 +19,9 @@ import 'package:flutter_animation/implicit_animations/animated_physical_model.da
 import 'package:flutter_animation/implicit_animations/animated_positioned_example.dart';
 import 'package:flutter_animation/implicit_animations/animated_switcher_example.dart';
 import 'package:flutter_animation/page_transitions/page_fade_transitions.dart';
+import 'package:flutter_animation/page_transitions/page_rotation_transition.dart';
+import 'package:flutter_animation/page_transitions/page_size_transition.dart';
+import 'package:flutter_animation/page_transitions/page_slide_transition.dart';
 import 'package:flutter_animation/page_transitions/page_two.dart';
 import 'package:flutter_animation/page_transitions/scale_page_transition.dart';
 import 'implicit_animations/animated_positioned_directional_example.dart';
@@ -321,6 +324,34 @@ class MainPage extends StatelessWidget {
                     Navigator.of(context).push(PageScaleTransitions(const PageTwo()));
                   },
                   child: const Text("Page Scale Transition", style: TextStyle(color: Colors.black),)),
+
+              ElevatedButton(
+                  style:ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(const Color(0xff02457a)),
+                  ) ,
+                  onPressed: () {
+                    Navigator.of(context).push(PageRotationTransitions(const PageTwo()));
+                  },
+                  child: const Text("Page Rotation Transition", style: TextStyle(color: Colors.black),)),
+
+              ElevatedButton(
+                  style:ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(const Color(0xff02457a)),
+                  ) ,
+                  onPressed: () {
+                    Navigator.of(context).push(PageSlideTransitions(const PageTwo()));
+                  },
+                  child: const Text("Page Slide Transition", style: TextStyle(color: Colors.black),)),
+              ElevatedButton(
+                  style:ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(const Color(0xff02457a)),
+                  ) ,
+                  onPressed: () {
+                    Navigator.of(context).push(PageSizeTransitions(const PageTwo()));
+                  },
+                  child: const Text("Page Size Transition", style: TextStyle(color: Colors.black),)),
+
+
 
 
             ],
