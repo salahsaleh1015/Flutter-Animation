@@ -20,7 +20,6 @@ import 'package:flutter_animation/implicit_animations/animated_positioned_exampl
 import 'package:flutter_animation/implicit_animations/animated_switcher_example.dart';
 import 'package:flutter_animation/more_animations/custom_painter_example.dart';
 import 'package:flutter_animation/more_animations/lottie_slider_example.dart';
-import 'package:flutter_animation/more_animations/rive_slider_example.dart';
 import 'package:flutter_animation/page_transitions/page_fade_transitions.dart';
 import 'package:flutter_animation/page_transitions/page_mix_fade_size_transition.dart';
 import 'package:flutter_animation/page_transitions/page_mix_scale_rotation_transition.dart';
