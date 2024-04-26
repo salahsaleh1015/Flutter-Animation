@@ -18,6 +18,9 @@ import 'package:flutter_animation/implicit_animations/animated_padding_example.d
 import 'package:flutter_animation/implicit_animations/animated_physical_model.dart';
 import 'package:flutter_animation/implicit_animations/animated_positioned_example.dart';
 import 'package:flutter_animation/implicit_animations/animated_switcher_example.dart';
+import 'package:flutter_animation/more_animations/custom_painter_example.dart';
+import 'package:flutter_animation/more_animations/lottie_slider_example.dart';
+import 'package:flutter_animation/more_animations/rive_slider_example.dart';
 import 'package:flutter_animation/page_transitions/page_fade_transitions.dart';
 import 'package:flutter_animation/page_transitions/page_mix_fade_size_transition.dart';
 import 'package:flutter_animation/page_transitions/page_mix_scale_rotation_transition.dart';
@@ -48,7 +51,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-//#02457a
 //#001b48
 class MainPage extends StatelessWidget {
   const MainPage({super.key});
@@ -474,6 +476,30 @@ class MainPage extends StatelessWidget {
                   },
                   child: const Text(
                     "Page Mix Scale Rotation Transitions",
+                    style: TextStyle(color: Colors.black),
+                  )),
+              ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor:
+                    MaterialStateProperty.all(const Color(0xff001b48)),
+                  ),
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const CustomPainterExample()));
+                  },
+                  child: const Text(
+                    "Custom Painter Example",
+                    style: TextStyle(color: Colors.black),
+                  )),
+              ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor:
+                    MaterialStateProperty.all(const Color(0xff001b48)),
+                  ),
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const LottieSliderExample()));
+                  },
+                  child: const Text(
+                    "Lottie Slider Example",
                     style: TextStyle(color: Colors.black),
                   )),
 

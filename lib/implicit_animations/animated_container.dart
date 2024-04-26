@@ -1,13 +1,11 @@
-
-
-
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 class AnimatedContainerExample extends StatefulWidget {
   const AnimatedContainerExample({super.key});
 
   @override
-  State<AnimatedContainerExample> createState() => _AnimatedContainerExampleState();
+  State<AnimatedContainerExample> createState() =>
+      _AnimatedContainerExampleState();
 }
 
 class _AnimatedContainerExampleState extends State<AnimatedContainerExample> {
@@ -17,32 +15,31 @@ class _AnimatedContainerExampleState extends State<AnimatedContainerExample> {
   double borderRadius = 40;
 
   changeAnimationValues() {
-     width = 300;
-     height = 300;
-     color = Colors.blue;
-     borderRadius = 90;
+    width = 300;
+    height = 300;
+    color = Colors.blue;
+    borderRadius = 90;
   }
+
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: const Text("Animated Container Example"),
       ),
       body: Center(
         child: GestureDetector(
           onTap: () {
-           setState(() {
-             changeAnimationValues();
-           });
+            setState(() {
+              changeAnimationValues();
+            });
           },
           child: AnimatedContainer(
             width: width,
             height: height,
             decoration: BoxDecoration(
               color: color,
-              borderRadius: BorderRadius.circular(
-borderRadius
-              ),
+              borderRadius: BorderRadius.circular(borderRadius),
             ),
             duration: const Duration(milliseconds: 400),
             child: Image.asset("assets/images/jerry.png"),
@@ -50,13 +47,12 @@ borderRadius
         ),
       ),
       floatingActionButton: FloatingActionButton(
-
         onPressed: () {
           setState(() {
-             width = 200;
-             height = 200;
-             color = Colors.grey;
-             borderRadius = 40;
+            width = 200;
+            height = 200;
+            color = Colors.grey;
+            borderRadius = 40;
           });
         },
         child: const Icon(
@@ -66,4 +62,3 @@ borderRadius
     );
   }
 }
-
